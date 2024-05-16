@@ -1,0 +1,44 @@
+.summary{
+    margin: 10px;
+    display: flex;
+    gap: 20px;
+    text-align: left;
+   
+    background-color: rgba(0, 0, 0, 0.44);
+    
+    margin-top: 50px;
+}
+
+
+@media screen and (max-width:1024px) {
+    .summary{
+        flex-direction: column;
+    }
+}
+
+.summary_current{
+    flex: 1;
+    text-align: center;
+    border: 3px solid white;
+    border-radius: 6px;
+}
+
+.summary_sum{
+    flex: 1;
+    text-align: center;
+    border: 3px solid white;
+    border-radius: 6px;
+}
+
+.summary p {
+    text-align: left;
+    padding: 20px;
+}
+.summary h1 {
+    background-color: yellow;
+    font-size: 18px;
+    color:black;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+}

@@ -1,0 +1,67 @@
+label{
+    display: inline-block;
+    color: white;
+    padding: 0.5rem;
+    width: 200px;
+    font-family: sans-serif;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border: 3px solid white;
+    --s:67px; /* shape size */
+  --m:4px;  /* line thickness */
+    position: relative;
+  --v1: #fff 119.5deg, #0000 120.5deg;
+  --v2: #000  119.5deg, #0000 120.5deg;
+  background:
+    conic-gradient(at var(--m)              calc(var(--s)*0.5777), transparent 270deg, #000 0deg),
+    conic-gradient(at calc(100% - var(--m)) calc(var(--s)*0.5777), #000 90deg,  transparent 0deg),
+    conic-gradient(from -60deg at 50% calc(var(--s)*0.8662)             , var(--v1)),
+    conic-gradient(from -60deg at 50% calc(var(--s)*0.8662 + 2*var(--m)), var(--v2)),
+    conic-gradient(from 120deg at 50% calc(var(--s)*1.4435 + 3*var(--m)), var(--v1)),
+    conic-gradient(from 120deg at 50% calc(var(--s)*1.4435 +   var(--m)), var(--v2)),
+    linear-gradient(90deg, #fff calc(50% - var(--m)),#000 0 calc(50% + var(--m)), #fff 0);
+  background-size: calc(var(--s) + 2*var(--m)) calc(var(--s)*1.732 + 3*var(--m)); 
+  mix-blend-mode:lighten;
+  }
+  @keyframes f {
+    100% {background-position:right}
+  }
+
+  label:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:linear-gradient(90deg,red,blue,green) left/400% 100%;
+    animation:f 2s infinite alternate linear;
+    z-index: -1;
+  }
+
+  @keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+  label svg{
+    width: 50px;
+    height: 50px;
+  }
+
+  .upload{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
